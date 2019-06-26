@@ -40,9 +40,6 @@ def partitionSeq(theList, first, last):
             left += 1
             right -= 1
 
-    print(theList)
-    print("First:", theList[first])
-    print("Last:", theList[right], "\n")
     # Move the position of the pivot to the right index (Proper Position)
     theList[first], theList[right] = theList[right], theList[first]
 
