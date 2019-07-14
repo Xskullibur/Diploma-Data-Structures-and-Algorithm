@@ -44,7 +44,7 @@ def sierpinski(points, degree, myTurtle, color):
 def main():
     myTurtle = turtle.Turtle()
     myTurtle.shape("turtle")
-    myTurtle.speed(999)
+    myTurtle.speed(3)
     myWin = turtle.Screen()
 
     myPoints = [[-200, -50], [0, 200], [200, -50]]

@@ -39,7 +39,7 @@ def sierpinski(size, degree, myturtle):
 
 myTurtle = turtle.Turtle()
 myTurtle.shape("turtle")
-myTurtle.speed(999999)
+myTurtle.speed(3)
 myTurtle.penup()
 myTurtle.goto(-200, -200)
 myTurtle.pendown()

@@ -45,7 +45,7 @@ def sierpinski(radius, degree, myturtle):
 
 myTurtle = turtle.Turtle()
 myTurtle.shape("turtle")
-myTurtle.speed(999)
+myTurtle.speed(3)
 myTurtle.penup()
 myTurtle.goto(0, -300)
 myTurtle.pendown()
