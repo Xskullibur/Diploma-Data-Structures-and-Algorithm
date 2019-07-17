@@ -1,3 +1,7 @@
+from timer import timeit
+import random
+
+@timeit
 def hybridSort(array, low, high):
 
     while low < high:
@@ -43,9 +47,9 @@ def quickSort(theList, first, last):
             left += 1
             right -= 1
 
-    print(theList)
-    print("First:", theList[first])
-    print("Last:", theList[right], "\n")
+    # print(theList)
+    # print("First:", theList[first])
+    # print("Last:", theList[right], "\n")
     # Move the position of the pivot to the right index (Proper Position)
     theList[first], theList[right] = theList[right], theList[first]
 
@@ -67,9 +71,11 @@ def insertionSort(array):
     array[pos] = val
 
 
-testArray1 = [9, 12, 5, 40, 1, 32, 50, 45, 22, 18, 42]
-testArray2 = [12, 16, 41, 24, 11, 19, 33, 28, 40, 38, 46, 20, 18, 27, 30, 14, 21, 4, 9, 39, 15, 8, 25, 48, 6, 5, 10, 3, 50, 13, 35, 37, 2, 34, 29, 22, 23, 43, 45, 17, 31, 44, 32, 1, 7, 26, 42, 47, 36, 49]
+def getTestArray(size):
+    return [random.randrange(1, 3000) for i in range(size)]
 
-print("Original:", testArray1)
-hybridSort(testArray1, 0, len(testArray1)-1)
-print("Sorted:", testArray1)
+
+array1 = getTestArray(1000)
+print("Original:", array1)
+hybridSort(array1, 0, len(array1)-1)
+print("Sorted:", array1)

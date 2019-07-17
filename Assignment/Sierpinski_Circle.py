@@ -1,5 +1,6 @@
 import turtle
 import math
+from timer import timeit
 
 
 def calcSmallRadius(radius):
@@ -12,6 +13,7 @@ def drawCicle(radius, myturtle, color):
     myturtle.circle(radius)
     myturtle.end_fill()
 
+@timeit
 def sierpinski(radius, degree, myturtle):
 
     initalPos = [myturtle.xcor(), myturtle.ycor()]
@@ -45,7 +47,7 @@ def sierpinski(radius, degree, myturtle):
 
 myTurtle = turtle.Turtle()
 myTurtle.shape("turtle")
-myTurtle.speed(3)
+myTurtle.speed(-1)
 myTurtle.penup()
 myTurtle.goto(0, -300)
 myTurtle.pendown()
@@ -53,5 +55,5 @@ myWin = turtle.Screen()
 
 colors = ["sky blue", "orange", "green", "yellow", "hot pink", 'blue']
 
-sierpinski(300, 4, myTurtle)
+sierpinski(200, 3, myTurtle)
 myWin.exitonclick()

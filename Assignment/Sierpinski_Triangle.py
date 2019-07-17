@@ -1,4 +1,5 @@
 import turtle
+from timer import timeit
 
 
 def drawTriangle(points, myturtle, color):
@@ -41,14 +42,15 @@ def sierpinski(points, degree, myTurtle, color):
         ], degree-1, myTurtle, colors[degree-1])
 
 
+@timeit
 def main():
     myTurtle = turtle.Turtle()
     myTurtle.shape("turtle")
-    myTurtle.speed(3)
+    myTurtle.speed(-1)
     myWin = turtle.Screen()
 
     myPoints = [[-200, -50], [0, 200], [200, -50]]
-    degree = 4
+    degree = 5
 
     sierpinski(myPoints, degree, myTurtle, colors[degree])
 
